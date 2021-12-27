@@ -116,7 +116,7 @@ $(document).ready(function () {
             $("#submit_button").prop("disabled", true);
         }
         });
-		$(".ajaxForm").submit(function (e) { //Обработка данных формы
+		$(".ajaxForm").submit(function (e) { 
 		e.preventDefault();
 		let href = $(this).attr("action");
 		$.ajax({
