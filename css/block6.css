@@ -1,0 +1,31 @@
+.block6 h2{
+    margin-top: 0;
+}
+.block6_flexbox{
+    width: 200px;
+    margin: 40px auto;
+}
+.block6_item{
+    text-align: center;
+    margin-bottom: 25px;
+}
+.block6_item_title{
+    font-size: 32px;
+    font-weight: bold;
+}
+.block6_item_body{
+    text-align: start;
+    font-size: 14px;
+    color: var(--grey);
+}
+@media (min-width: 767px) {
+	.block6_flexbox{
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-between;
+    }
+    .block6_item{
+        text-align: start;
+    }
+}

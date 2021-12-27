@@ -1,0 +1,250 @@
+.block11{
+	background: linear-gradient( 254.72deg,rgba(255,255,255,.276) -114.85%,rgba(255,255,255,0) 69.04%),#040613;
+}
+.block11 h2{
+    color: #fff;
+    text-align: center;
+    margin-bottom: 15px;
+}
+.footer_container{
+    color: white;
+    width: 100%;
+    font-weight: 500;
+    margin-bottom: 70px;
+}
+.line{
+    height: 1px;
+    background-color: #e5e5e59f;
+    margin: 60px -15px 60px -15px;
+}
+.social_network{
+    display: flex;
+    margin-bottom: 15px;
+}
+.social_network img{
+    margin-right: 10px;
+    height: 30px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.block11_description{
+    max-width: 480px;
+    margin: auto;
+}
+.block11_text{
+    color: white;
+    font-weight: 300;
+    opacity: .7;
+}
+.phone_number{
+    color: white;
+    text-decoration: none;
+    display: block;
+    margin: 20px auto 10px auto;
+    font-size: 20px;
+    font-weight: bold;
+    position: relative;
+    padding-left: 30px;
+    max-width: 480px;
+}
+.phone_number::before{
+    content: "";
+    width: 17px;
+    height: 15px;
+    background: url("../img/phone.svg") no-repeat center;
+    background-size: contain;
+    position: absolute;
+    left: 0;
+    top: 4px;
+}
+.email_address{
+    color: white;
+    display: block;
+    margin: 20px auto 10px auto;
+    font-size: 14px;
+    font-weight: bold;
+    position: relative;
+    padding-left: 30px;
+    max-width: 480px;
+}
+.email_address::before{
+    content: "";
+    width: 17px;
+    height: 15px;
+    background: url("../img/mail.svg") no-repeat center;
+    background-size: contain;
+    position: absolute;
+    left: 0;
+    top: 2px;
+}
+.submit_button
+{
+    color: white;
+    background-color: var(--orange);
+    cursor: pointer;
+    border-radius: 5px;
+    border: 1px solid var(--orange);
+    text-align: center;
+    padding: 25px 10px;
+    margin-top: 20px;
+    transition: all 300ms;
+    width: 100%
+}
+.submit_button:hover
+{
+    background-color: transparent;
+    border: 1px solid var(--orange);
+}
+.custom_checkbox{
+    background-color: transparent;
+    width: 25px;
+    height: 25px;
+    border-radius: 5px;
+    display: block;
+    float: left;
+    border: 2px solid #e5e5e59f;
+    margin-top: 5px;
+    margin-right: 10px;
+    text-align: center;
+    font-weight: bold;
+    color: transparent;
+    user-select: none; 
+    cursor: pointer;
+}
+.after_checkbox{
+    color: #fff;
+    font-size: 12px;
+    cursor: pointer;
+    display: block;
+}
+.block11_forma{
+    width: 100%;
+    max-width: 480px;
+    margin: 25px auto;
+}
+.form_field{
+    background-color:transparent;
+    border: 1px solid #e5e5e55c;
+    border-radius: 5px;
+    width: 100%;
+    margin: 5px 0;
+    font-weight: 500;
+    font-size: 14px;
+    padding: 20px 24px;
+    color: #fff;
+    line-height: 1.2;
+}
+.form_area{
+    background-color:transparent;
+    border: 1px solid #e5e5e55c;
+    border-radius: 5px;
+    width: 100%;
+    margin: 5px 0;
+    font-weight: 500;
+    font-size: 14px;
+    padding: 20px 24px;
+    color: #fff;
+    line-height: 1.2;
+    height: 150px;
+    resize: vertical;
+}
+#agree_checkbox{
+display: none;
+}
+#agree_checkbox:checked + .custom_checkbox{
+    background-color: var(--orange);
+    border: 2px solid white;
+    color: white;
+}
+::placeholder{
+	color: #fff;
+}
+@media (min-width: 767px) {
+	
+	.text_title{
+        text-align: start;
+    }
+	.text_title h1{
+        font-size: 50px;
+        margin-top: 0;
+        margin-bottom: 20px;
+    }
+	.header_description{
+        font-size: 18px;
+		font-weight: 500;
+    }
+	.title_wrapper{
+        width: 500px;
+        float: left;
+        margin-right: 40px;
+    }
+	.tariff_button{
+        margin: 46px 0 0 0;
+    }
+	.description{
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-row-gap: 80px;
+        margin-top: 40px;
+        margin-bottom: 75px;
+        padding-top: 40px;
+    }
+    .description_item{
+        min-height: 40px;
+            height: 100%;
+    }
+    .first{
+        font-size: 48px;
+        position: relative;
+        margin-top: -22px;
+    }
+    .first img{
+        position: absolute;
+        left: 55px;
+        top: -16px;
+    }	
+	.description_text{
+        font-size: 12px;
+       
+    }
+	.block11 h2{
+        font-size: 42px;
+        text-align: start;
+    }
+	.block11_container{
+        display: flex;
+    }
+	.block11_description{
+        margin: initial;
+    }
+	.start{
+        height: 460px;
+    }
+	.phone_number{
+        font-size: 20px;
+        margin-top: 200px;
+    }
+    .phone_number::before
+    {
+        top: 12px;
+    }
+	.email_address{
+        font-size: 20px;
+    }
+    .footer_container{
+         margin-bottom: 0;
+    }
+    .block11_forma{
+		margin-right: 0;
+	}	
+}
+@media (max-width: 1023px) {
+    .title_wrapper{
+        float: inherit;
+        margin: auto;
+    }
+    .video{
+        height: 100%;
+        width: auto;
+    }
+    
+}

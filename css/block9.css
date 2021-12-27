@@ -1,0 +1,126 @@
+.block9 h2{
+    text-align: center;
+    margin-top: 0;
+}
+.block9_flexbox {
+	display: flex;
+	flex-direction: column;
+	min-height: 0;
+	min-width: 0;
+}
+.block9_container {
+	box-shadow: 0 4px 60px rgb(162 162 162 / 25%);
+	padding: 15px;
+}
+.block9_slider {
+	min-height: 0;
+	min-width: 0;
+	padding: 15px;
+}
+.block9_navigation {
+	border-top: 1px solid gray ;
+}
+.slider {
+	min-width: 0;
+}
+.slider p {
+	margin: 0;
+}
+.slide_number {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 30px;
+	padding: 20px;
+}
+.slide_number .slide_slash {
+	margin: 0 5px;
+	opacity: 0.4;
+}
+.slide_number button {
+	cursor: pointer;
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+.slide_number button::-moz-focus-inner {
+	padding: 0;
+	border: 0;
+}
+.slide_number .slick-arrow {
+	font-size: 0;
+}
+.slide_number .slick-arrow.slick-prev {
+	background: url('../img/left_arrow.svg') 0 0/100% no-repeat;
+	height: 35px;
+	width: 35px;
+}
+.slide_number .slick-arrow.slick-next {
+	background: url('../img/right_arrow.svg') 0 0/100% no-repeat;
+	height: 35px;
+	width: 35px;
+}
+.slider .slider_text {
+	cursor: default;
+	user-select: none;
+}
+.slider .slider_maintext {
+	font-weight: bold;
+    font-size: 14px;
+    line-height: 1.2;
+    color: #050c33;
+}
+.slider .slider_textfrom {
+	font-weight: 500;
+    font-size: 14px;
+    line-height: 1.2;
+    color: #838b9c;
+	margin-top: 28px;
+}
+.slick-track {
+	display: flex;
+	align-items: flex-start;
+}
+.slider .slider_link {
+	text-decoration: underline;
+	color: #4f5a73;
+}
+.slide_number .slide_current {
+	margin: 0 0 0 30px;
+}
+.slide_number .slide_length {
+	margin: 0 30px 0 0;
+	opacity: 0.4;
+}
+@media (min-width: 1023px) {
+	.block9_container {
+		padding: 60px 0 60px 60px;
+	}
+	.block9_flexbox {
+		flex-direction: row;
+		align-items: stretch;
+		justify-content: space-between;
+	}
+	.block9_slider {
+		flex: 1 1 70%;
+	}
+	.block9_navigation {
+		flex: 1 1 30%;
+		border-top: 0px;
+		border-left: 1px solid gray ;
+		display: flex;
+	}
+	.slider .slider_image {
+		margin: 0 0 40px;
+	}
+	.slider .slider_item {
+		padding: 14px 60px;
+	}
+	.slide_number {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		font-size: 30px;
+		padding: 20px 0px 20px 20px;
+	}
+}

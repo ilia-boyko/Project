@@ -1,0 +1,108 @@
+.block5{
+    color: var(--grey);
+    background-color: #fff;
+    padding-top: 60px;
+}
+.block5 h2{
+    color: black;
+    margin-top: 0;
+}   
+.block5_title{
+    text-align: center;
+    margin-top: 50px;
+}
+.block5_tariff{
+    border-radius: 5px;
+    border: 1px solid #e6e6e6;
+    margin: 0 auto 30px;
+    padding: 30px 15px;
+    max-width: 420px;
+    transition: all 500ms;
+}
+.block5_tariff_title{
+    color: var(--orange);
+    font-size: 22px;
+    font-weight: bold;
+    border-bottom: 2px solid #e5e5e5;
+    margin-bottom: 50px;
+    padding-bottom: 25px;
+}
+.block5_tariff_reference{
+    display: block;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 5px;
+    color: var(--orange);
+    border: 1px solid var(--orange);
+    text-align: center;
+    padding: 20px 10px;
+    font-size: 12px;
+    margin-top: 40px;
+    transition: all 300ms;
+    background-color: transparent;
+}
+.block5_tarif_reference_reverse{
+    color: white;
+    background-color: var(--orange);
+}
+.tariff_services{
+    margin-bottom: 18px;
+    font-size: 14px;
+    color: #4e5972;
+    position: relative;
+    padding-left: 30px;
+}
+.tariff_services::before{
+    content: "";
+    width: 13px;
+    height: 10px;
+    background: url("../img/check.svg") no-repeat center;
+    background-size: cover;
+    position: absolute;
+    left: 0;
+    margin-right: 15px;
+}
+.block5_offer{
+    text-align: center;
+    font-size: 15px;
+    max-width: 475px;
+    margin: auto;
+}
+.block5_reference{
+    text-align: center;
+    margin-top: 30px;
+    text-transform: uppercase;
+}
+.block5_reference a{
+    transition: color 300ms;
+    color: black;
+    font-size: 13px;
+}
+.block5_reference5_reference a:hover{
+    text-decoration: none;
+    color: var(--orange);
+}
+@media (min-width: 767px) {
+	.block5_container
+    {
+        display: flex;
+        justify-content: space-around;
+    }
+	.block5_tariff{
+        width: 33%;
+        height: 500px;
+        margin: 40px 15px;
+    }
+	.block5_tariff:hover{
+        transform: scale(1.1);
+        box-shadow: 0 4px 60px rgb(162 162 162 / 25%);
+    }
+    .block5_tariff:hover .block5_tariff_reference{
+        background-color: var(--orange);
+        color: white;
+    }
+    .block5_tariff_reference_reverse{
+        background-color: initial;
+        color: var(--orange);
+    }
+}

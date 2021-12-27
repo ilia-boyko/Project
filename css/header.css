@@ -1,0 +1,253 @@
+.header{
+	margin: 0;
+	padding: 0;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 10;
+}
+.header ul {
+	padding: 0;
+}
+.header ul, li {
+	list-style: none;
+}
+.header a {
+	text-decoration: none;
+	text-transform: uppercase;
+}
+.header_container{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	min-height: 70px;
+}
+.header_logo{
+	height: 30px;
+	z-index: 5;
+}
+.menu_icon{
+	display: none;
+}
+.menu_list > li{
+	position: relative;
+	margin: 0 0 0 30px;
+}
+.menu_link{
+	color: white;
+}
+.menu_sublist{
+	position: absolute;
+	top: 100%;
+	right: 0;
+	background-color: var(--orange);
+	padding: 10px 3px;
+}
+.menu_sublist.about{
+	min-width: 180px;
+}
+.menu_sublist.admin{
+	min-width: 290px;
+}
+.menu_sublist li{
+	margin: 0 0 10px 0;
+	padding: 0 20px;
+}
+.menu_sublink{
+	line-height: 28px;
+}
+.menu_sublist li:last-child{
+	margin: 0;
+}
+.menu_sublink{
+	color: white;
+}
+body._pc .menu_list > li:hover .menu_sublist {
+	opacity: 1;
+	visibility: visible;
+	pointer-events: all;
+}
+body._pc .menu_list > li:hover {
+	border-bottom: 3px solid var(--orange);
+}
+body._pc .menu_list > li:hover .menu_arrow {
+	transform: rotate(0deg);
+}
+body._pc .menu_sublist > li:hover {
+	background-color: #d13018;
+}
+body .menu_list > li {
+	display: flex;
+	align-items: center;
+}
+body .menu_arrow {
+	display: block;
+	width: 0;
+	height: 0;
+	margin: 0 0 0 5px;
+	transition: transform 0.3s ease 0s;
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+	border-top: 10px solid #fff;
+	transform: rotate(-90deg);
+}
+body._touch .menu_list > li._active .menu_sublist {
+	opacity: 1;
+	visibility: visible;
+	pointer-events: all;
+}
+body.menu_list > li._active .menu_arrow {
+	transform: rotate(0deg);
+}
+@media (min-width: 767px) {
+	.header {
+		position: relative;
+		font-size: 9px;
+	}
+	.menu_link {
+		line-height: 25px;
+	}
+	.header_logo {
+		height: 25px;
+	}
+	.menu_list {
+		display: flex;
+		align-items: center;
+		margin: 0;
+	}
+	.menu_list > li {
+		padding: 1px 0;
+		margin: 0 0 0 10px;
+	}
+	.menu_sublist.admin {
+		transform: translate(33%, 0%);
+		min-width: 200px;
+	}
+	.menu_sublist.about {
+		transform: translate(70%, 0%);
+		min-width: 150px;
+	}
+	.menu_sublist {
+		opacity: 0;
+		visibility: hidden;
+		pointer-events: none;
+		transition: all 0.3s ease 0s;
+	}
+	
+}
+@media (min-width: 1023px) {
+	.header {
+		font-size: 13px;
+	}
+	.menu_list > li {
+		margin: 0 0 0 20px;
+	}
+	.menu_sublist.admin {
+		transform: translate(40%, 0%);
+		min-width: 290px;
+	}
+	.menu_sublist.about {
+		transform: translate(69%, 0%);
+		min-width: 180px;
+	}
+}
+@media (max-width: 767px) {
+	.header {
+		position: fixed;
+		top: auto;
+		bottom: 0;
+	}
+	.header_logo {
+   		margin: 0 0 0 20px;
+	}
+	.menu_icon {
+		z-index: 5;
+		display: block;
+		position: relative;
+		width: 30px;
+		height: 18px;
+		cursor: pointer;
+		margin: 0 20px 0 0;
+	}
+	.menu_icon span,
+	.menu_icon::before,
+	.menu_icon::after {
+		left: 0;
+		position: absolute;
+		height: 10%;
+		width: 100%;
+		transition: all 0.3s ease 0s;
+		background-color: white;
+	}
+	.menu_icon::before,
+	.menu_icon::after {
+		content: '';
+	}
+	.menu_icon::before {
+		top: 0;
+	}
+	.menu_icon::after {
+		bottom: 0;
+	}
+	.menu_icon span {
+		top: 50%;
+		transform: scale(1) translate(0px, -50%);
+	}
+	.menu_body {
+		position: fixed;
+		top:0;
+		bottom: 70px;
+		left: 100%;
+		width: 100%;
+		height: 100%;
+		background-color: black;
+		transition: left 0.3s ease 0s;
+		overflow: auto;
+	}
+	.menu_body._active {
+		left: 0;
+	}
+	.menu_body > ul {
+		padding: 0 0 0 20px;
+	}
+	.menu_body::before {
+		content: "";
+		position: fixed;
+		width: 100%;
+		top: auto;
+		bottom: 0;
+		left: 0;
+		height: 70px;
+		background-color: black;
+		z-index: 2;
+	}
+	.menu_list > ul {
+		padding: 0 0 0 20px;
+	}
+	.menu_list > li {
+		flex-wrap: wrap;
+		flex: 0 1 50%;
+		margin: 0 0 30px 0;
+	}
+	.menu_list > li._active .menu_sublist {
+		display: block
+	}
+	.menu_sublist {
+		position: relative;
+		background-color: transparent;
+		flex: 1 1 100%;
+		margin: 20px 0 -10px 0;
+		display: none;
+	}
+	.menu_list > li:last-child {
+		margin-bottom: 0;
+	}
+	.menu_link {
+		font-size: 16px;
+	}
+	.menu_sublink {
+		font-size: 16px;
+	}
+	
+}
